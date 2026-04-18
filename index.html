@@ -1,76 +1,51 @@
-:root {
-  --azul: #16324f;
-  --azul-oscuro: #0d2236;
-  --gris: #5f6b76;
-  --gris-claro: #f4f6f8;
-  --blanco: #ffffff;
-  --borde: #d9e0e6;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bernardi Construcciones SRL</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #1f2a33;
-  background: #fff;
-  line-height: 1.6;
-}
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    .slide {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
 
-section {
-  padding: 70px 0;
-}
+    .slide img {
+      width: 100%;
+      max-width: 1600px;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
 
-h1, h2, h3 {
-  color: var(--azul-oscuro);
-  margin-top: 0;
-}
+  <section class="slide"><img src="slide1.jpg" alt="Slide 1"></section>
+  <section class="slide"><img src="slide2.jpg" alt="Slide 2"></section>
+  <section class="slide"><img src="slide3.jpg" alt="Slide 3"></section>
+  <section class="slide"><img src="slide4.jpg" alt="Slide 4"></section>
+  <section class="slide"><img src="slide5.jpg" alt="Slide 5"></section>
+  <section class="slide"><img src="slide6.jpg" alt="Slide 6"></section>
+  <section class="slide"><img src="slide7.jpg" alt="Slide 7"></section>
+  <section class="slide"><img src="slide8.jpg" alt="Slide 8"></section>
+  <section class="slide"><img src="slide9.jpg" alt="Slide 9"></section>
 
-p {
-  color: var(--gris);
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
-
-.btn-principal {
-  background: var(--azul);
-  color: #fff;
-}
-
-.btn-principal:hover {
-  background: #0f2740;
-}
-
-.btn-secundario {
-  border: 1px solid var(--azul);
-  color: var(--azul);
-  background: transparent;
-}
-
-.hero {
-  padding: 100px 0 80px;
-  background: linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.92)),
-              url('img/obra-hero.jpg') center/cover no-repeat;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  padding: 24px;
-}
+</body>
+</html>
