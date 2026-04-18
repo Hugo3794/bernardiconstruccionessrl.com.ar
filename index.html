@@ -1,164 +1,72 @@
-819
-820
-821
-822
-823
-824
-825
-826
-827
-828
-829
-830
-831
-832
-833
-834
-835
-836
-837
-838
-839
-840
-841
-842
-843
-844
-845
-846
-847
-848
-849
-850
-851
-852
-853
-854
-855
-856
-857
-858
-859
-860
-861
-862
-863
-864
-865
-866
-867
-868
-869
-870
-871
-872
-873
-874
-875
-876
-877
-878
-879
-880
-881
-882
-883
-884
-885
-886
-887
-888
-889
-890
-891
-892
-893
-894
-895
-896
-897
-898
-899
-<!DOCTYPE html>
-        <div class="card">AySA</div>
-        <div class="card">Nestlé</div>
-        <div class="card">Dirección General de Cultura y Educación</div>
-        <div class="card">Empresas privadas</div>
-        <div class="card">Contratistas y comitentes</div>
-      </div>
-    </div>
-  </section>
+:root {
+  --azul: #16324f;
+  --azul-oscuro: #0d2236;
+  --gris: #5f6b76;
+  --gris-claro: #f4f6f8;
+  --blanco: #ffffff;
+  --borde: #d9e0e6;
+}
 
-  <section class="section section-alt" id="contacto">
-    <div class="container">
-      <div class="contacto-box">
-        <div class="contact-card">
-          <span class="eyebrow">Contacto</span>
-          <h2>Hablemos de su obra o proyecto</h2>
-          <p>
-            Si necesita evaluar una obra, desarrollar una propuesta o consultar por ejecución,
-            podemos analizar la alternativa más conveniente desde lo técnico y lo operativo.
-          </p>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1f2a33;
+  background: #fff;
+  line-height: 1.6;
+}
 
-          <div class="btn-group">
-            <a class="btn btn-primary" href="https://wa.me/541123109230" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
-            <a class="btn btn-secondary" href="tel:+541123109230">Llamar ahora</a>
-          </div>
-        </div>
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-        <div class="contact-card">
-          <h3>Datos de contacto</h3>
-          <ul class="contact-list">
-            <li><strong>Empresa:</strong> Bernardi Construcciones SRL</li>
-            <li><strong>Ubicación:</strong> Ituzaingó, Buenos Aires</li>
-            <li><strong>Web:</strong> bernardiconstruccionessrl.com.ar</li>
-            <li><strong>WhatsApp:</strong> +54 11 2310-9230</li>
-            <li><strong>Email:</strong> info@bernardiconstruccionessrl.com.ar</li>
-          </ul>
-        </div>
-      </div>
+section {
+  padding: 70px 0;
+}
 
-      <div style="margin-top: 34px;">
-        <div class="cta-final">
-          <h2>Construimos con conocimiento, experiencia y criterio técnico.</h2>
-          <p>
-            Obras civiles, infraestructura hidráulica, saneamiento y proyectos de construcción con enfoque profesional y respaldo real.
-          </p>
-          <div class="btn-group">
-            <a class="btn btn-primary" href="https://wa.me/541123109230" target="_blank" rel="noopener noreferrer">Solicitar contacto</a>
-            <a class="btn btn-secondary" href="#obras">Ver antecedentes</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+h1, h2, h3 {
+  color: var(--azul-oscuro);
+  margin-top: 0;
+}
 
-  <footer>
-    <div class="container">
-      <div>© 2026 Bernardi Construcciones SRL</div>
-      <div>Ingeniería · Construcción · Gerenciamiento</div>
-    </div>
-  </footer>
+p {
+  color: var(--gris);
+}
 
-  <a class="whatsapp-float" href="https://wa.me/541123109230" target="_blank" rel="noopener noreferrer">
-    WhatsApp
-  </a>
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
 
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
+.btn-principal {
+  background: var(--azul);
+  color: #fff;
+}
 
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
+.btn-principal:hover {
+  background: #0f2740;
+}
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-      });
-    });
-  </script>
-</body>
-</html>
+.btn-secundario {
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  background: transparent;
+}
 
-Úselo Control + Shift + mpara alternar el tabfoco de 
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.92)),
+              url('img/obra-hero.jpg') center/cover no-repeat;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 24px;
+}
