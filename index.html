@@ -1,821 +1,85 @@
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856
+857
+858
+859
+860
+861
+862
+863
+864
+865
+866
+867
+868
+869
+870
+871
+872
+873
+874
+875
+876
+877
+878
+879
+880
+881
+882
+883
+884
+885
+886
+887
+888
+889
+890
+891
+892
+893
+894
+895
+896
+897
+898
+899
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bernardi Construcciones SRL</title>
-  <meta
-    name="description"
-    content="Bernardi Construcciones SRL. Ingeniería, construcción y gerenciamiento de proyectos. Obras civiles, hidráulicas, viales, saneamiento y movimiento de suelos."
-  />
-  <style>
-    :root{
-      --azul:#163b6d;
-      --azul-2:#234f8f;
-      --gris:#f3f5f7;
-      --texto:#1f2937;
-      --muted:#5b6777;
-      --naranja:#e8751a;
-      --blanco:#ffffff;
-      --borde:#d9e0e7;
-      --sombra:0 10px 30px rgba(0,0,0,.08);
-      --radio:16px;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--texto);
-      background:var(--gris);
-      line-height:1.5;
-    }
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bernardi Construcciones SRL</title>
-  <meta name="description" content="Bernardi Construcciones SRL. Empresa constructora e ingeniería con experiencia en obras civiles, hidráulicas, viales, saneamiento e infraestructura." />
-  <style>
-    :root {
-      --azul: #14324a;
-      --azul-oscuro: #0b2235;
-      --gris-texto: #5d6872;
-      --gris-claro: #f3f5f7;
-      --gris-borde: #dce2e7;
-      --blanco: #ffffff;
-      --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --radio: 12px;
-      --ancho: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1d2730;
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(92%, var(--ancho));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 80px 0;
-    }
-
-    .section-alt {
-      background: var(--gris-claro);
-    }
-
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 12px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      color: var(--azul);
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-      line-height: 1.2;
-      color: var(--azul-oscuro);
-    }
-
-    h1 {
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      margin-bottom: 18px;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      margin-bottom: 16px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin-top: 0;
-      color: var(--gris-texto);
-      font-size: 1rem;
-    }
-
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      transition: 0.25s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--azul);
-      color: #fff;
-      box-shadow: var(--sombra);
-    }
-
-    .btn-primary:hover {
-      background: #0f2940;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--azul);
-      border-color: var(--azul);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(20, 50, 74, 0.06);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 78px;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--azul-oscuro);
-      letter-spacing: 0.2px;
-    }
-
-    .brand-subtitle {
-      font-size: 0.88rem;
-      color: var(--gris-texto);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-weight: 700;
-      color: var(--azul-oscuro);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover {
-      color: var(--azul);
-    }
-
-    .hero {
-      position: relative;
-      color: #fff;
-      padding: 110px 0 90px;
-      background:
-        linear-gradient(rgba(8, 20, 32, 0.72), rgba(8, 20, 32, 0.78)),
-        url('img/obra3.jpg') center center / cover no-repeat;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 36px;
-      align-items: center;
-    }
-
-    .hero p {
-      color: rgba(255,255,255,0.88);
-      font-size: 1.08rem;
-      max-width: 700px;
-    }
-
-    .hero-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: var(--radio);
-      padding: 28px;
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-card h3,
-    .hero-card p,
-    .hero-card li {
-      color: #fff;
-    }
-
-    .hero-card ul {
-      margin: 18px 0 0;
-      padding-left: 18px;
-    }
-
-    .hero-card li {
-      margin-bottom: 8px;
-      color: rgba(255,255,255,0.9);
-    }
-
-    .resumen-grid,
-    .services-grid,
-    .clientes-grid,
-    .obras-grid,
-    .stats-grid,
-    .gallery-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .resumen-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .clientes-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .obras-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .stats-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid var(--gris-borde);
-      border-radius: var(--radio);
-      padding: 26px;
-      box-shadow: var(--sombra);
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .stat-card {
-      background: var(--azul-oscuro);
-      color: #fff;
-      border-radius: var(--radio);
-      padding: 28px 22px;
-      text-align: center;
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 2rem;
-      margin-bottom: 8px;
-    }
-
-    .stat-card span {
-      color: rgba(255,255,255,0.84);
-      font-size: 0.95rem;
-    }
-
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 34px;
-    }
-
-    .services-grid .card {
-      min-height: 100%;
-    }
-
-    .gallery-feature {
-      position: relative;
-      margin-bottom: 22px;
-      overflow: hidden;
-      border-radius: var(--radio);
-      box-shadow: var(--sombra);
-    }
-
-    .gallery-feature img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 30px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.72));
-    }
-
-    .gallery-overlay h3,
-    .gallery-overlay p {
-      color: #fff;
-      margin-bottom: 8px;
-    }
-
-    .gallery-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: var(--radio);
-      box-shadow: var(--sombra);
-      transition: transform 0.25s ease;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.02);
-    }
-
-    .obra-card h3 {
-      min-height: 56px;
-    }
-
-    .obra-card p {
-      margin-bottom: 8px;
-    }
-
-    .clientes-grid .card {
-      text-align: center;
-      font-weight: 700;
-      color: var(--azul-oscuro);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 110px;
-    }
-
-    .contacto-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .contact-card {
-      background: #fff;
-      border: 1px solid var(--gris-borde);
-      border-radius: var(--radio);
-      padding: 30px;
-      box-shadow: var(--sombra);
-    }
-
-    .contact-list {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-    }
-
-    .contact-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--gris-borde);
-      color: var(--gris-texto);
-    }
-
-    .contact-list li:last-child {
-      border-bottom: 0;
-    }
-
-    .cta-final {
-      background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
-      color: #fff;
-      border-radius: 18px;
-      padding: 42px;
-      box-shadow: var(--sombra);
-    }
-
-    .cta-final h2,
-    .cta-final p {
-      color: #fff;
-    }
-
-    footer {
-      padding: 28px 0 40px;
-      background: #0c1721;
-      color: rgba(255,255,255,0.8);
-      font-size: 0.95rem;
-    }
-
-    footer .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 1100;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 18px;
-      border-radius: 999px;
-      background: #25D366;
-      color: #fff;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-    }
-
-    .whatsapp-float:hover {
-      transform: translateY(-1px);
-    }
-
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 0;
-      font-size: 1.8rem;
-      color: var(--azul-oscuro);
-      cursor: pointer;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .contacto-box,
-      .resumen-grid,
-      .services-grid,
-      .clientes-grid,
-      .obras-grid,
-      .stats-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding-top: 90px;
-      }
-
-      .gallery-feature img {
-        height: 320px;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        right: 0;
-        background: #fff;
-        border-bottom: 1px solid rgba(0,0,0,0.06);
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 18px 4%;
-        gap: 16px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .section {
-        padding: 64px 0;
-      }
-
-      .hero {
-        padding: 82px 0 72px;
-      }
-
-      .hero-card,
-      .card,
-      .contact-card,
-      .cta-final {
-        padding: 22px;
-      }
-
-      .gallery-grid img {
-        height: 220px;
-      }
-
-      .gallery-feature img {
-        height: 260px;
-      }
-
-      .btn-group {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <span class="brand-title">Bernardi Construcciones SRL</span>
-        <span class="brand-subtitle">Ingeniería · Construcción · Gerenciamiento</span>
-      </div>
-
-      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
-
-      <nav class="nav-links" id="nav-links">
-        <a href="#empresa">Empresa</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#obras">Obras</a>
-        <a href="#antecedentes">Antecedentes</a>
-        <a href="#clientes">Clientes</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Desde 2010</span>
-        <h1>Ingeniería y construcción con experiencia real de obra.</h1>
-        <p>
-          Desarrollamos obras civiles, hidráulicas, viales, de saneamiento e infraestructura
-          para el sector público y privado, con foco en capacidad técnica, cumplimiento y resultados.
-        </p>
-        <div class="btn-group">
-          <a class="btn btn-primary" href="#contacto">Solicitar contacto</a>
-          <a class="btn btn-secondary" href="#obras">Ver obras</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <h3>Perfil de la empresa</h3>
-        <p>
-          Bernardi Construcciones SRL combina conocimiento técnico, experiencia de ejecución y criterio
-          operativo para llevar adelante proyectos con claridad, orden y respaldo profesional.
-        </p>
-        <ul>
-          <li>Obras civiles e industriales</li>
-          <li>Infraestructura hidráulica y saneamiento</li>
-          <li>Intervenciones para clientes públicos y privados</li>
-          <li>Base operativa en Ituzaingó</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <div class="resumen-grid">
-        <div class="card">
-          <h3>Fundada en 2010</h3>
-          <p>Trayectoria sostenida en proyectos de construcción, infraestructura y servicios de ingeniería.</p>
-        </div>
-        <div class="card">
-          <h3>Capacidad técnica</h3>
-          <p>Experiencia en obras civiles, hidráulicas, viales, industriales, educativas y de saneamiento.</p>
-        </div>
-        <div class="card">
-          <h3>Enfoque en resultados</h3>
-          <p>Planificación, ejecución y control con criterio técnico para brindar seguridad y previsibilidad.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="empresa">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Empresa</span>
-        <h2>Una constructora orientada a ejecutar con seriedad.</h2>
-        <p>
-          Bernardi Construcciones SRL desarrolla soluciones integrales en ingeniería y construcción,
-          con experiencia en obras civiles, hidráulicas, viales, saneamiento e infraestructura.
-          Nuestra propuesta combina conocimiento técnico, criterio de obra y compromiso con el cumplimiento.
-        </p>
-        <p>
-          Gestionamos proyectos para clientes privados, municipios, organismos públicos y empresas,
-          administrando cada variable con foco en calidad, orden operativo y confianza.
-        </p>
-      </div>
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <strong>2010</strong>
-          <span>Año de inicio</span>
-        </div>
-        <div class="stat-card">
-          <strong>Ituzaingó</strong>
-          <span>Base operativa</span>
-        </div>
-        <div class="stat-card">
-          <strong>Público + Privado</strong>
-          <span>Clientes y comitentes</span>
-        </div>
-        <div class="stat-card">
-          <strong>Obras reales</strong>
-          <span>Antecedentes comprobables</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="servicios">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Servicios</span>
-        <h2>Áreas de trabajo</h2>
-        <p>
-          Ejecutamos obras y servicios con una visión integral del proyecto,
-          priorizando la factibilidad, el control y la calidad de terminación.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="card">
-          <h3>Obras civiles</h3>
-          <p>Construcción, ampliación, refacción y ejecución de obras civiles para distintas escalas y usos.</p>
-        </div>
-        <div class="card">
-          <h3>Infraestructura hidráulica</h3>
-          <p>Redes, válvulas, cámaras, cañerías y trabajos asociados a sistemas de agua y conducción.</p>
-        </div>
-        <div class="card">
-          <h3>Obras viales</h3>
-          <p>Intervenciones de movimiento de suelos, preparación, compactación y tareas vinculadas a infraestructura urbana.</p>
-        </div>
-        <div class="card">
-          <h3>Saneamiento</h3>
-          <p>Obras e intervenciones relacionadas con infraestructura sanitaria y mejoras de servicio.</p>
-        </div>
-        <div class="card">
-          <h3>Obra industrial y educativa</h3>
-          <p>Experiencia en depósitos, oficinas, talleres y edificios educativos con respaldo documental.</p>
-        </div>
-        <div class="card">
-          <h3>Gerenciamiento y control</h3>
-          <p>Seguimiento técnico, organización de obra y coordinación para ejecutar con previsibilidad y criterio profesional.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="obras">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Obras</span>
-        <h2>Imágenes de obra real</h2>
-        <p>
-          Intervenciones en infraestructura hidráulica, saneamiento y obra civil,
-          con participación operativa directa y experiencia de campo.
-        </p>
-      </div>
-
-      <div class="gallery-feature">
-        <img src="img/obra3.jpg" alt="Montaje de cañería de gran diámetro en obra hidráulica">
-        <div class="gallery-overlay">
-          <h3>Infraestructura hidráulica y saneamiento</h3>
-          <p>Experiencia en redes, válvulas, conducción, instalaciones y trabajos de campo con criterio técnico.</p>
-        </div>
-      </div>
-
-      <div class="gallery-grid">
-        <img src="img/obra1.jpg" alt="Intervención en red de agua potable">
-        <img src="img/obra2.jpg" alt="Compactación de suelo en obra">
-        <img src="img/obra4.jpg" alt="Equipo trabajando en instalación hidráulica">
-        <img src="img/obra5.jpg" alt="Sistema de válvulas en red de agua">
-        <img src="img/obra6.jpg" alt="Operación de infraestructura hidráulica">
-        <img src="img/obra3.jpg" alt="Montaje de cañería de gran diámetro">
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="antecedentes">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Antecedentes</span>
-        <h2>Antecedentes de obra</h2>
-        <p>
-          Experiencia comprobable en obras civiles, industriales, educativas y de infraestructura,
-          con antecedentes en Ituzaingó, Merlo, CABA y Provincia de Buenos Aires.
-        </p>
-      </div>
-
-      <div class="obras-grid">
-        <div class="card obra-card">
-          <h3>Edificio de oficinas y taller</h3>
-          <p><strong>Ubicación:</strong> Ituzaingó</p>
-          <p><strong>Cliente:</strong> Battilana</p>
-          <p><strong>Superficie:</strong> 468 m²</p>
-          <p><strong>Plazo:</strong> 6 meses</p>
-        </div>
-
-        <div class="card obra-card">
-          <h3>Construcción de depósito</h3>
-          <p><strong>Ubicación:</strong> Ituzaingó</p>
-          <p><strong>Cliente:</strong> Alerju S.A.</p>
-          <p><strong>Tipo:</strong> Obra industrial</p>
-          <p><strong>Respaldo:</strong> Recepción definitiva</p>
-        </div>
-
-        <div class="card obra-card">
-          <h3>Jardín de Infantes N° 958</h3>
-          <p><strong>Ubicación:</strong> Merlo</p>
-          <p><strong>Organismo:</strong> Dirección General de Cultura y Educación</p>
-          <p><strong>Tipo:</strong> Edificio educativo</p>
-          <p><strong>Respaldo:</strong> Acta y contrato</p>
-        </div>
-
-        <div class="card obra-card">
-          <h3>Jardín de Infantes N° 959</h3>
-          <p><strong>Ubicación:</strong> Mariano Acosta, Merlo</p>
-          <p><strong>Organismo:</strong> Dirección General de Cultura y Educación</p>
-          <p><strong>Tipo:</strong> Edificio educativo</p>
-          <p><strong>Respaldo:</strong> Acta de recepción provisoria</p>
-        </div>
-
-        <div class="card obra-card">
-          <h3>Refacciones varias</h3>
-          <p><strong>Ubicación:</strong> CABA</p>
-          <p><strong>Cliente:</strong> Ashira S.A.</p>
-          <p><strong>Tipo:</strong> Oficinas, baños, vestuarios y áreas de servicio</p>
-        </div>
-
-        <div class="card obra-card">
-          <h3>Construcción de plaza</h3>
-          <p><strong>Ubicación:</strong> CABA</p>
-          <p><strong>Cliente:</strong> Balsas Hnos. S.A.</p>
-          <p><strong>Tipo:</strong> Espacio público</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="clientes">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Clientes</span>
-        <h2>Clientes y comitentes</h2>
-        <p>
-          Participación en proyectos para empresas, municipios y organismos,
-          aportando ejecución y respaldo técnico.
-        </p>
-      </div>
-
-      <div class="clientes-grid">
-        <div class="card">Municipios</div>
         <div class="card">AySA</div>
         <div class="card">Nestlé</div>
         <div class="card">Dirección General de Cultura y Educación</div>
@@ -896,3 +160,5 @@
   </script>
 </body>
 </html>
+
+Úselo Control + Shift + mpara alternar el tabfoco de 
