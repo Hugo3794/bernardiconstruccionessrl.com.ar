@@ -1,72 +1,60 @@
-:root {
-  --azul: #16324f;
-  --azul-oscuro: #0d2236;
-  --gris: #5f6b76;
-  --gris-claro: #f4f6f8;
-  --blanco: #ffffff;
-  --borde: #d9e0e6;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernardi Construcciones SRL</title>
 
+<style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #1f2a33;
-  background: #fff;
-  line-height: 1.6;
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
+/* contenedor general */
+.slide {
+    width: 100%;
 }
 
-section {
-  padding: 70px 0;
+/* imagen */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-h1, h2, h3 {
-  color: var(--azul-oscuro);
-  margin-top: 0;
+/* boton whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
 }
+</style>
+</head>
 
-p {
-  color: var(--gris);
-}
+<body>
 
-.btn {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
+<div class="slide"><img src="slide1.jpg"></div>
+<div class="slide"><img src="slide2.jpg"></div>
+<div class="slide"><img src="slide3.jpg"></div>
+<div class="slide"><img src="slide4.jpg"></div>
+<div class="slide"><img src="slide5.jpg"></div>
+<div class="slide"><img src="slide6.jpg"></div>
+<div class="slide"><img src="slide7.jpg"></div>
+<div class="slide"><img src="slide8.jpg"></div>
+<div class="slide"><img src="slide9.jpg"></div>
 
-.btn-principal {
-  background: var(--azul);
-  color: #fff;
-}
+<a class="whatsapp" href="https://wa.me/541123109230" target="_blank">
+WhatsApp
+</a>
 
-.btn-principal:hover {
-  background: #0f2740;
-}
-
-.btn-secundario {
-  border: 1px solid var(--azul);
-  color: var(--azul);
-  background: transparent;
-}
-
-.hero {
-  padding: 100px 0 80px;
-  background: linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.92)),
-              url('img/obra-hero.jpg') center/cover no-repeat;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid var(--borde);
-  border-radius: 10px;
-  padding: 24px;
-}
+</body>
+</html>
