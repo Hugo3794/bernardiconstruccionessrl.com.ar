@@ -4,38 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bernardi Construcciones SRL</title>
+
 <style>
-body {
-    margin: 0;
-    height: 100vh;
-    background-image: url('fondo.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+body{
+    margin:0;
+    height:100vh;
+    background:url("fondo.png") center center / cover no-repeat;
 }
 
-.whatsapp {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 70px;
-    height: 70px;
-    background: #25D366;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-    text-decoration: none;
+/* BOTÓN WHATSAPP RESPONSIVE */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    z-index:999;
 }
 
-.whatsapp svg {
-    width: 35px;
-    height: 35px;
-    fill: white;
+.whatsapp svg{
+    width:30px;
+    height:30px;
+    fill:white;
+}
+
+/* PC */
+@media (min-width:768px){
+    .whatsapp{
+        right:40px;
+        bottom:40px;
+        width:70px;
+        height:70px;
+    }
+
+    .whatsapp svg{
+        width:35px;
+        height:35px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <a class="whatsapp" href="https://wa.me/5491123109230" target="_blank">
